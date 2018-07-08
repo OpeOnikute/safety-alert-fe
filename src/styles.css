@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+.btn-naij {
+  border-radius: 20px;
+  background-color: #0A7310;
+  text-transform: uppercase;
+  color: white !important;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  font-size: 12px;
+}
+
+.naij {
+  color: #0A7310;
+}
+
+.top {
+  margin-top: 30px;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+section {
+  padding: 20px 0;
+}

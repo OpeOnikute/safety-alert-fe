@@ -8,6 +8,7 @@ import { MainComponent } from './main/main.component';
 import { IndexComponent } from './index/index.component';
 import { EntriesComponent } from './entries/entries.component';
 import { AboutComponent } from './about/about.component';
+import { AddEntryComponent } from './add-entry/add-entry.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AboutComponent } from './about/about.component';
     MainComponent,
     IndexComponent,
     EntriesComponent,
-    AboutComponent
+    AboutComponent,
+    AddEntryComponent
   ],
   imports: [
     BrowserModule,

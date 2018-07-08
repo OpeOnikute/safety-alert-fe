@@ -40,4 +40,18 @@ a.enabled {
   .brand {
     float: none;
   }
+
+  .menu {
+    display: inline-grid;
+  }
+
+  .menu-link {
+    width: 30%;
+    margin: auto;
+  }
+
+  .pad-md-v {
+    text-align: center;
+    padding: 30px 0 0;
+  }
 }

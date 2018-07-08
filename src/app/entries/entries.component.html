@@ -1,11 +1,16 @@
-<div class="mx-auto" style="max-width: 41rem;margin-top: 15px;">
+<div class="mx-auto top" style="max-width: 41rem">
   <div class="container-fluid">
     <div>
-      <nav class="navbar navbar-light bg-light">
-        <form class="form-inline" style="float: right;">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+      <nav class="navbar navbar-light">
+        <ul class="navbar-nav mr-auto">
+          <a routerLink="/entries/add"><span><i class="fa fa-plus naij"></i> Add New Entry</span></a>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <form class="form-inline" style="float: right;">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-naij my-2 my-sm-0">Search</button>
+          </form>
+        </ul>
       </nav>
     </div>
   </div>
