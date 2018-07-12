@@ -1,5 +1,6 @@
 <div class="mx-auto top" style="max-width: 41rem">
   <div class="container-fluid">
+    <app-message></app-message>
     <div>
       <nav class="navbar navbar-light">
         <ul class="navbar-nav mr-auto">
@@ -15,31 +16,39 @@
     </div>
   </div>
   <div class="container-fluid">
-    <div class="content-block">
-      <div class="img-block">
-        <div class="px-2" style="background-color: white;border-bottom: 1px solid #ddd;">
-          <span class="pad-sm"><small class="text-muted">27th May, 2018</small></span>
+    <div class="content-block" *ngIf="loading">
+      <span style="font-size: xx-large;"><i class="fa fa-refresh fa-spin"></i></span>
+      <span>Fetching entries..</span>
+    </div>
+    <div class="content-block" *ngIf="!entries && !loading">
+      <section>
+        <h1 class="strong">Looks like there's nothing here yet.</h1>
+      </section>
+      <section>
+        <p>Be a real g and <a class="naij" routerLink="/entries/add">add one</a>?</p>
+      </section>
+    </div>
+    <div  *ngIf="entries">
+      <div class="content-block" *ngFor="let entry of entries">
+        <div class="img-block">
+          <div class="px-2" style="background-color: white;border-bottom: 1px solid #ddd;">
+            <span class="pad-sm"><small class="text-muted">{{entry.createdAt | date: 'dd/MM/yyyy'}}</small></span>
+          </div>
+          <div [ngSwitch]="entry.contentType">
+            <img class="img-fluid" src="{{ entry.content }}" *ngSwitchCase="'image'">
+            <video style="width: 100%" controls *ngSwitchCase="'video'">
+              <source src="{{entry.content}}" type="video/mp4">
+              Browser not supported.
+            </video>
+          </div>
         </div>
-        <img class="img-fluid" src="assets/images/BOMB-BLAST.jpg">
-      </div>
-      <div class="mx-0">
-        <h4 class="strong">Lorem ipsum lobatan</h4>
-        <h6>This is the description which adequately proves the point above.</h6>
-        <p><span class="strong">Location:</span> Lagos, Nigeria.</p>
+        <div class="mx-0">
+          <h4 class="strong">{{entry.title}}</h4>
+          <h6>{{entry.description}}</h6>
+          <p><span class="strong">Location:</span> {{entry.location}}</p>
+        </div>
+        <hr style="border: 1px solid rgba(0,0,0,0.1);width: 50%;margin: 50px auto;">
       </div>
     </div>
-    <div class="content-block">
-      <div class="img-block">
-        <div class="px-2" style="background-color: white;border-bottom: 1px solid #ddd;">
-          <span class="pad-sm"><small class="text-muted">27th May, 2018</small></span>
-        </div>
-        <img class="img-fluid" src="assets/images/BOMB-BLAST2.jpeg">
-      </div>
-      <div class="mx-0">
-        <h4 class="strong">Lorem ipsum lobatan</h4>
-        <h6>This is the description which adequately proves the point above.</h6>
-        <p><span class="strong">Location:</span> Lagos, Nigeria.</p>
-      </div>
     </div>
-  </div>
 </div>

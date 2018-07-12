@@ -16,6 +16,7 @@ import { EntriesComponent } from './entries/entries.component';
 import { AboutComponent } from './about/about.component';
 import { AddEntryComponent } from './add-entry/add-entry.component';
 import { MessageComponent } from '../services/message/message.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MessageComponent } from '../services/message/message.component';
     EntriesComponent,
     AboutComponent,
     AddEntryComponent,
-    MessageComponent
+    MessageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
