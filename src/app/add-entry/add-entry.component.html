@@ -6,27 +6,24 @@
     <h4 class="strong">Thank you for contributing.</h4>
   </section>
   <section class="mx-auto text-left" style="max-width: 60%">
-    <form>
+    <form name="form-upload" ngNativeValidate (submit)="uploadContent()">
+      <app-message></app-message>
       <div class="form-group">
         <label for="title">Title</label>
-        <input type="email" class="form-control" id="title">
+        <input class="form-control" name="title" [(ngModel)]="entry.title" id="title" required>
       </div>
       <div class="form-group">
         <label for="description">Description</label>
-        <input type="email" class="form-control" id="description" aria-describedby="descriptionHelp">
+        <input class="form-control" id="description" name="description" [(ngModel)]="entry.description" maxlength="140" aria-describedby="descriptionHelp" required>
         <small id="descriptionHelp" class="form-text text-muted">Less than 140 characters please.</small>
       </div>
       <div class="form-group">
-        <label for="contentType">Content type</label>
-        <input type="email" class="form-control" id="contentType" aria-describedby="contentTypeHelp">
-        <small id="contentTypeHelp" class="form-text text-muted">You can only upload images for now.</small>
-      </div>
-      <div class="form-group">
-        <label for="content">Content</label>
-        <input type="file" class="form-control" id="content" aria-describedby="contentHelp">
+        <label for="location">Location</label>
+        <input class="form-control" id="location" name="location" [(ngModel)]="entry.location" maxlength="140" aria-describedby="locationHelp" required>
       </div>
       <div class="form-group text-center">
-        <a class="btn btn-naij" type="submit">Add Entry</a>
+        <input class="btn btn-naij" type="submit" value="Upload Content" *ngIf="!loading && !loadingAdd">
+        <a class="btn btn-naij" *ngIf="loading||loadingAdd"><span><i class="fa fa-refresh fa-spin"></i></span> Please wait.</a>
       </div>
     </form>
   </section>
