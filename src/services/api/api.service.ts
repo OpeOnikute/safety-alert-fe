@@ -14,7 +14,7 @@ interface Response {
  */
 @Injectable()
 export class ApiService {
-  url = isDevMode() ? 'http://localhost:3000' : 'https://y-api-staging.herokuapp.com/v1';
+  url = isDevMode() ? 'http://localhost:3000' : 'https://safety-alert-api.herokuapp.com';
   headers: any;
 
   constructor(public http: HttpClient) {
