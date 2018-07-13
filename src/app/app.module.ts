@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { WindowRef } from './helpers/window.handler';
+import { SearchPipe } from './helpers/search.pipe';
 
 import { ApiService, MessageService, UserService, UtilsService } from '../services/services';
 
@@ -27,7 +28,8 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     AddEntryComponent,
     MessageComponent,
-    FooterComponent
+    FooterComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
