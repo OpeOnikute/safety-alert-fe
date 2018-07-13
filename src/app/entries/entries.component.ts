@@ -10,7 +10,7 @@ import { MessageService } from '../../services/message/message.service';
 })
 export class EntriesComponent implements OnInit {
 
-  entries: any;
+  entries = null;
   loading = false;
 
   constructor(private app: AppComponent, private userService: UserService, private messaging: MessageService) {}
