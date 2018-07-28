@@ -31,3 +31,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Default Image
 - Search bar
 - Add loading bar
+- order entries by most recent.

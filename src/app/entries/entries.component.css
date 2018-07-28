@@ -10,3 +10,7 @@
   color: black;
   letter-spacing: 1px;
 }
+.content {
+  overflow: hidden;
+  max-height: 450px;
+}

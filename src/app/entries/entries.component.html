@@ -32,7 +32,7 @@
           <div class="px-2" style="background-color: white;border-bottom: 1px solid #ddd;">
             <span class="pad-sm"><small class="text-muted">{{entry.createdAt | date: 'dd/MM/yyyy'}}</small></span>
           </div>
-          <div [ngSwitch]="entry.contentType">
+          <div class="content" [ngSwitch]="entry.contentType">
             <img class="img-fluid" src="{{ entry.content }}" *ngSwitchCase="'image'">
             <video style="width: 100%" controls *ngSwitchCase="'video'">
               <source src="{{entry.content}}" type="video/mp4">
