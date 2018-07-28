@@ -53,7 +53,7 @@ export class AddEntryComponent implements OnInit {
         }
         const uploaded = result[0];
         component.entry.contentType = uploaded['resource_type'];
-        component.entry.content = uploaded['url'];
+        component.entry.content = uploaded['secure_url'];
         component.addEntry();
       });
   }
