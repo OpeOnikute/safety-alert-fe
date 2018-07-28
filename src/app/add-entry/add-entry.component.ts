@@ -67,7 +67,7 @@ export class AddEntryComponent implements OnInit {
     this.loadingAdd = true;
     this.userService.createEntry(this.entry).then(data => {
       this.loadingAdd = false;
-      this.entry={title: null, description: null, location: null, content: null, contentType: null};
+      this.entry= {title: null, description: null, location: null, content: null, contentType: null};
       this.messaging.sendMessage('success', 'You Rock! Your content has been uploaded successfully.');
     }, err => {
       this.loadingAdd = false;

@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { WindowRef } from './helpers/window.handler';
 import { SearchPipe } from './helpers/search.pipe';
 
-import { ApiService, MessageService, UserService, UtilsService } from '../services/services';
+import { ApiService, MessageService, UserService, UtilsService, LogUpdateService } from '../services/services';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -45,6 +45,7 @@ import { environment } from '../environments/environment';
     MessageService,
     UserService,
     UtilsService,
+    LogUpdateService,
     WindowRef
   ],
   bootstrap: [AppComponent]

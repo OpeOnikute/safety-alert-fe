@@ -11,6 +11,10 @@ export class UserService {
 
   constructor(public api: ApiService) { }
 
+  createPush (data) {
+    return this._processPost('push', data);
+  }
+
   createEntry (data) {
     return this._processPost('entry', data);
   }
