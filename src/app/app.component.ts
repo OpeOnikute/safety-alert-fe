@@ -34,7 +34,10 @@ export class AppComponent {
         });
         console.log(sub);
       })
-      .catch(err => console.error('Could not subscribe to notifications', err));
+      .catch(err => {
+        this.messaging.sendMessage('error', err || 'Technical issue: An error occurred. Please try again.');
+        console.error('Could not subscribe to notifications', err);
+      });
 
   }
 }
