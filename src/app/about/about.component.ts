@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
     this.app.setTitle('About');
   }
 
-  subscribe() {
+  subscribeForPush() {
     this.swPush.requestSubscription({
       serverPublicKey: this.VAPID_PUBLIC_KEY
     })

@@ -46,7 +46,7 @@ export class UserService {
         .subscribe(res => {
           this._processResult(res, resolve, reject);
           }, err => {
-          this._processResult(err.error, resolve, reject);
+          this._processResult(err || err.error, resolve, reject);
         });
     });
   }
@@ -66,7 +66,7 @@ export class UserService {
         .subscribe(res => {
           this._processResult(res, resolve, reject);
         }, err => {
-          this._processResult(err.error, resolve, reject);
+          this._processResult(err || err.error, resolve, reject);
         });
     });
   }
@@ -79,7 +79,7 @@ export class UserService {
         .subscribe(res => {
           this._processResult(res, resolve, reject);
         }, error => {
-          this._processResult(error.error, resolve, reject);
+          this._processResult(error || error.error, resolve, reject);
         });
     });
   }
